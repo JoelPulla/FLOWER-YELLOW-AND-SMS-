@@ -2,6 +2,7 @@ from turtle import *
 import colorsys
 import math
 import random
+import time
 
 speed(0.01)
 bgcolor("black")
@@ -102,26 +103,24 @@ goto(0,0)
 setheading(0)
 draw_flower(0, 50)
 
-# Escribir el mensaje
-hideturtle()
-penup()
-goto(0, 350)
-pendown()
-color("white")  # Cambia el color a blanco 
-write("Para la niña más bonita", align="center", font=("Arial", 11, "normal")) # Cambia el fuente y tamaño del texto
-# penup()
-# goto(0, 330)
-# pendown()
-# write("mi Micky, my rey", align="center", font=("Arial", 11, "normal"))
 
+# Escribir el mensaje
 penup()
-goto(0, -300)
-pendown()
-write("Mi loquita <3", align="center", font=("Arial", 11, "normal"))
-hideturtle()
+goto(-90, 80)
+color("white")  # Cambia el color a blanco 
+style= ('Arial', 20, 'bold')
+
+sms:str = 'TKM CHICA DE MI VIDA ' # Escribe el nombre o el emsaje
+
+for i in sms:
+    write(i, align='center', font=style)
+    time.sleep(0.2)
+    penup()
+    forward(25)
+
 
 # Dibuja las estrellas aleatorias
-draw_random_start(50)
+draw_random_start(30)
 
 hideturtle()
 
